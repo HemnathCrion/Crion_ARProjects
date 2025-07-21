@@ -22530,9 +22530,13 @@ MonoBehaviour:
   walk: 5
   run: 0
   crouch: 0
+  crouchScale: {x: 0, y: 0, z: 0}
+  normalScale: {x: 0, y: 0, z: 0}
   isMoving: 0
   isCrouching: 0
   isRunning: 0
+  X: 0
+  Y: 0
 --- !u!136 &449668287
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -71318,6 +71322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80304612657527247af16b30e1abb0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlight: {fileID: 0}
+  selection: {fileID: 0}
 --- !u!4 &1385678124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4419689379816266, guid: 20ea8160d97044b42929888ba38f2a16, type: 3}
