@@ -193,7 +193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 785124}
   - component: {fileID: 785126}
-  - component: {fileID: 785125}
   - component: {fileID: 785127}
   m_Layer: 5
   m_Name: Panel
@@ -224,36 +223,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &785125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &785126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -271,12 +240,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 785123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e973993f1ac91248afcd1f8358cc661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetDatum:
-    assetName: 
-    description: 
+  assetNameText: {fileID: 1505774853}
+  descriptionNameText: {fileID: 1699900986}
 --- !u!1001 &1456842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2869,14 +2837,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c215b4f7fe5869f4298216d851d658e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 979724332}
   infobuttonPanel: {fileID: 823932586}
   infopanel: {fileID: 785123}
   infobutton: {fileID: 1627076000}
-  player: {fileID: 449668284}
   infocloseButtom: {fileID: 1122659004}
-  offset: {x: 0, y: 1.5, z: 0}
-  currentarget: {fileID: 40008248}
+--- !u!64 &40008252
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27661236}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 6a7a03246af1eec45a4a6226bd0ffa6b, type: 3}
+--- !u!114 &40008253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27661236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetName: Copper Distiller
+  description: Traditional copper distillation setup with boiler and condenser connected
+    by a curved pipe. Ideal for crafting spirits, essential oils, or chemical extracts
+    with precision.
+  panal_Detials: {fileID: 40008251}
+  infoPanel: {fileID: 785127}
+  offset: {x: 0.5, y: 1.5, z: -1}
   canwastarget: {fileID: 442007766}
 --- !u!4 &40425250 stripped
 Transform:
@@ -4791,6 +4796,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1079243014729136, guid: 0cfbd6f426c92ad4896fbd4648e2e01b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2102567962}
+    - targetCorrespondingSourceObject: {fileID: 1079243014729136, guid: 0cfbd6f426c92ad4896fbd4648e2e01b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2102567963}
   m_SourcePrefab: {fileID: 100100000, guid: 0cfbd6f426c92ad4896fbd4648e2e01b, type: 3}
 --- !u!4 &74854257 stripped
 Transform:
@@ -6715,6 +6723,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1506063703518766, guid: 6e9e4a7b4dba70144b6fb564214b013d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 40008251}
+    - targetCorrespondingSourceObject: {fileID: 1506063703518766, guid: 6e9e4a7b4dba70144b6fb564214b013d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 40008252}
+    - targetCorrespondingSourceObject: {fileID: 1506063703518766, guid: 6e9e4a7b4dba70144b6fb564214b013d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 40008253}
   m_SourcePrefab: {fileID: 100100000, guid: 6e9e4a7b4dba70144b6fb564214b013d, type: 3}
 --- !u!1 &113691938
 GameObject:
@@ -13605,6 +13619,7 @@ GameObject:
   - component: {fileID: 257242242}
   - component: {fileID: 257242241}
   - component: {fileID: 257242245}
+  - component: {fileID: 257242246}
   m_Layer: 0
   m_Name: Book09b
   m_TagString: Selectable
@@ -13624,7 +13639,8 @@ Transform:
   m_LocalPosition: {x: 3.4835725, y: -1.8158022, z: -4.890009}
   m_LocalScale: {x: 1, y: 1, z: 1.2631943}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1865885893}
   m_Father: {fileID: 518834684}
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 159.453}
 --- !u!65 &257242241
@@ -13737,14 +13753,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c215b4f7fe5869f4298216d851d658e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 979724332}
   infobuttonPanel: {fileID: 823932586}
   infopanel: {fileID: 785123}
   infobutton: {fileID: 1627076000}
-  player: {fileID: 449668284}
   infocloseButtom: {fileID: 1122659004}
-  offset: {x: 0, y: 1.5, z: 0}
-  currentarget: {fileID: 257242240}
+--- !u!114 &257242246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257242239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetName: Vintage Herbal
+  description: Ornate antique books on herbal medicine rest on a wooden surface,
+    rich with historical charm. Intricate covers hint at botanical wisdom and forgotten
+    remedies.
+  panal_Detials: {fileID: 257242245}
+  infoPanel: {fileID: 785127}
+  offset: {x: 0, y: 0.5, z: 0}
   canwastarget: {fileID: 442007766}
 --- !u!1 &258548315
 GameObject:
@@ -14502,7 +14533,6 @@ Transform:
   - {fileID: 95978611}
   - {fileID: 594066093}
   - {fileID: 258548316}
-  - {fileID: 1865885893}
   - {fileID: 1165273425}
   - {fileID: 670629727}
   - {fileID: 1534316006}
@@ -15473,14 +15503,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c215b4f7fe5869f4298216d851d658e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 979724332}
   infobuttonPanel: {fileID: 823932586}
   infopanel: {fileID: 785123}
   infobutton: {fileID: 1627076000}
-  player: {fileID: 449668284}
   infocloseButtom: {fileID: 1122659004}
-  offset: {x: 0, y: 1, z: 0}
-  currentarget: {fileID: 74854257}
+--- !u!114 &294213939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294213929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetName: Antique Oil Lamp
+  description: Elegant brass-based oil lamp with a frosted glass globe, resting on
+    a wooden surface. A soft reflection in the background adds depth and vintage
+    ambiance.
+  panal_Detials: {fileID: 294213934}
+  infoPanel: {fileID: 785127}
+  offset: {x: 0, y: 0.5, z: 0}
   canwastarget: {fileID: 442007766}
 --- !u!1 &296891795
 GameObject:
@@ -22906,8 +22951,8 @@ Transform:
   m_GameObject: {fileID: 449668284}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.755, z: 0}
+  m_LocalScale: {x: 0.69594, y: 0.69594, z: 0.69594}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 979724330}
@@ -27530,6 +27575,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1259995281058250, guid: 5626f14794fa8504c9fff1f8ad6c86f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1571926434}
+    - targetCorrespondingSourceObject: {fileID: 1259995281058250, guid: 5626f14794fa8504c9fff1f8ad6c86f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1571926435}
   m_SourcePrefab: {fileID: 100100000, guid: 5626f14794fa8504c9fff1f8ad6c86f2, type: 3}
 --- !u!4 &512068079 stripped
 Transform:
@@ -40765,10 +40813,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: info
+  m_text: Info
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40798,7 +40846,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -59279,18 +59327,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122659002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1178534214}
   m_Father: {fileID: 785124}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 52.2, y: 47.1}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122659004
 MonoBehaviour:
@@ -59313,9 +59361,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.4716981, g: 0.15930933, b: 0.15930933, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -62692,7 +62740,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: +
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -74013,7 +74061,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1412670533}
-  - component: {fileID: 1412670534}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -74036,20 +74083,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442007766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1412670534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412670532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4b18973d6aece4b9a4724bab042d3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assetNameText: {fileID: 1505774853}
-  descriptionText: {fileID: 1699900986}
 --- !u!4 &1413297416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4634395377019306, guid: 52174d465cd2c1445b611d4541065314, type: 3}
@@ -77439,14 +77472,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c215b4f7fe5869f4298216d851d658e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 979724332}
   infobuttonPanel: {fileID: 823932586}
   infopanel: {fileID: 785123}
   infobutton: {fileID: 1627076000}
-  player: {fileID: 449668284}
   infocloseButtom: {fileID: 1122659004}
-  offset: {x: 0, y: 1.5, z: 0}
-  currentarget: {fileID: 1473313972}
+--- !u!114 &1473313978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203639414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetName: Antique Globe
+  description: A vintage-style globe with a sepia-toned map, mounted on a wooden
+    stand and encircled by a rotating metal ring. Its aged appearance evokes a sense
+    of historical exploration and timeless charm.
+  panal_Detials: {fileID: 1473313977}
+  infoPanel: {fileID: 785127}
+  offset: {x: 0, y: 0.6, z: 0.5}
   canwastarget: {fileID: 442007766}
 --- !u!1 &1475020783
 GameObject:
@@ -78973,13 +79021,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -79009,7 +79057,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -38.642296, y: 0, z: -18.605408, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -81511,6 +81559,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1864355702505366, guid: b324f35bcc808f04d91168616dd3434d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 294213934}
+    - targetCorrespondingSourceObject: {fileID: 1864355702505366, guid: b324f35bcc808f04d91168616dd3434d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 294213939}
   m_SourcePrefab: {fileID: 100100000, guid: b324f35bcc808f04d91168616dd3434d, type: 3}
 --- !u!1001 &1549147896
 PrefabInstance:
@@ -82654,14 +82705,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c215b4f7fe5869f4298216d851d658e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 979724332}
   infobuttonPanel: {fileID: 823932586}
   infopanel: {fileID: 785123}
   infobutton: {fileID: 1627076000}
-  player: {fileID: 449668284}
   infocloseButtom: {fileID: 1122659004}
-  offset: {x: 0, y: 1, z: -1}
-  currentarget: {fileID: 512068079}
+--- !u!114 &1571926435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571926412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetName: Cozy Bookshelf
+  description: A warm wooden bookshelf filled with a mix of vertically and horizontally
+    stacked books. The casual arrangement adds charm to a quiet, carpeted reading
+    space.
+  panal_Detials: {fileID: 294213934}
+  infoPanel: {fileID: 785127}
+  offset: {x: 0, y: 1.2, z: -1}
   canwastarget: {fileID: 442007766}
 --- !u!1 &1572855083
 GameObject:
@@ -85595,9 +85661,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 1, g: 0.61381906, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.98211056, b: 0.5641509, a: 1}
+    m_PressedColor: {r: 1, g: 0.574957, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -88288,6 +88354,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1578946076071402, guid: ba1428520731c5f4db0f360740e26728, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1473313977}
+    - targetCorrespondingSourceObject: {fileID: 1578946076071402, guid: ba1428520731c5f4db0f360740e26728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1473313978}
   m_SourcePrefab: {fileID: 100100000, guid: ba1428520731c5f4db0f360740e26728, type: 3}
 --- !u!1 &1670699014
 GameObject:
@@ -89451,14 +89520,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -89487,7 +89556,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0.9637881, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -100509,12 +100578,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865885892}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03478087, y: -0.7067443, z: 0.7058059, w: 0.03377581}
-  m_LocalPosition: {x: 4.871997, y: -1.773, z: 0.69678324}
-  m_LocalScale: {x: 0.7304915, y: 0.7304915, z: 0.5095883}
+  m_LocalRotation: {x: -0.0005603442, y: -0.0007150471, z: 0.13054176, w: 0.99144244}
+  m_LocalPosition: {x: 0.005538375, y: -0.023324601, z: -0.0308001}
+  m_LocalScale: {x: 0.7304912, y: 0.7304912, z: 0.40341276}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 275806644}
+  m_Father: {fileID: 257242240}
   m_LocalEulerAnglesHint: {x: 89.888, y: 0, z: 174.52}
 --- !u!65 &1865885894
 BoxCollider:
@@ -113386,14 +113455,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c215b4f7fe5869f4298216d851d658e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 979724332}
   infobuttonPanel: {fileID: 823932586}
   infopanel: {fileID: 785123}
   infobutton: {fileID: 1627076000}
-  player: {fileID: 449668284}
   infocloseButtom: {fileID: 1122659004}
-  offset: {x: 0, y: 1.5, z: 0}
-  currentarget: {fileID: 2102567958}
+--- !u!114 &2102567963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607161058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f7a405626a8114996cb6c42213e330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetName: Skulls Study
+  description: Two human skulls rest on a wooden surface, one with a pronounced jaw
+    and visible teeth. A book with a skull illustration adds a scholarly touch to
+    this anatomical scene.
+  panal_Detials: {fileID: 2102567962}
+  infoPanel: {fileID: 785127}
+  offset: {x: 0, y: 0.5, z: 0}
   canwastarget: {fileID: 442007766}
 --- !u!1 &2105264149
 GameObject:
