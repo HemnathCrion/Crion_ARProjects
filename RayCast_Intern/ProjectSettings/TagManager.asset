@@ -8,6 +8,7 @@ TagManager:
   - Light
   - TopLight
   - Fire
+  - LabTag
   layers:
   - Default
   - TransparentFX

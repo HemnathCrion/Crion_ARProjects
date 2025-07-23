@@ -9,7 +9,9 @@ public class CollitionandTriger : MonoBehaviour
     public Light[] topLight;
     public GameObject particleSystems;
     public Light fireLight;
-    //public TextMeshProUGUI enteredText;
+    public TextMeshProUGUI entryText;
+    public TextMeshProUGUI labText;
+    public TextMeshProUGUI topText;
     public GameObject enterPanel;
     private void Start()
     {
@@ -24,6 +26,7 @@ public class CollitionandTriger : MonoBehaviour
             }
       particleSystems.SetActive(false);
         fireLight.enabled = false;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,21 +37,37 @@ public class CollitionandTriger : MonoBehaviour
             {
                 light.enabled =true;
                 enterPanel.SetActive(true);
-                StartCoroutine(WaitAndShow());
-                //enteredText.text = "Welcome You Entered";
+                entryText.text = "Welcome You Enterd";
+                StartCoroutine(ShowPanel());
+                
+                Destroy(other.gameObject);
+                
             }
 
+        }
+        
+        if( other.CompareTag("LabTag"))
+        {
+            enterPanel.SetActive(true);
+            labText.text = "Welcome You Have In Lab";
+            StartCoroutine(ShowPanel());
+            Destroy(other.gameObject);
+                
+            
         }
         if( other.CompareTag("TopLight"))
         {
             foreach(Light light1 in topLight)
             {
+                labText.enabled = false ;
                 light1.enabled =true;
-                Debug.Log("Enterd");
+                enterPanel.SetActive(true);
+                topText.text = "You Have A Topflor";
+                StartCoroutine (ShowPanel());
+                Destroy(other.gameObject);
             }
 
         }
-       
 
     }
     private void OnTriggerStay(Collider other)
@@ -69,9 +88,19 @@ public class CollitionandTriger : MonoBehaviour
 
         }
     }
-    private IEnumerator WaitAndShow()
+    
+    public IEnumerator ShowPanel()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
         enterPanel.SetActive(false);
+        entryText.enabled = false ;
+        
     }
+    //public IEnumerator ShowtopPanel()
+    //{
+    //    yield return new WaitForSeconds(2f);
+    //    enterPanel.SetActive(false);
+
+        
+    //}
 }
