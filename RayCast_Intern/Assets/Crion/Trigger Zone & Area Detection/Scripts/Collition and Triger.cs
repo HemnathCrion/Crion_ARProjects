@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CollitionandTriger : MonoBehaviour
@@ -8,8 +9,11 @@ public class CollitionandTriger : MonoBehaviour
     public Light[] topLight;
     public GameObject particleSystems;
     public Light fireLight;
+    //public TextMeshProUGUI enteredText;
+    public GameObject enterPanel;
     private void Start()
     {
+        enterPanel.SetActive(false);
         foreach(Light light in target)
         {
             light.enabled = false;
@@ -29,7 +33,9 @@ public class CollitionandTriger : MonoBehaviour
             foreach(Light light in target)
             {
                 light.enabled =true;
-                Debug.Log("Enterd");
+                enterPanel.SetActive(true);
+                StartCoroutine(WaitAndShow());
+                //enteredText.text = "Welcome You Entered";
             }
 
         }
@@ -43,8 +49,6 @@ public class CollitionandTriger : MonoBehaviour
 
         }
        
-
-
 
     }
     private void OnTriggerStay(Collider other)
@@ -64,5 +68,10 @@ public class CollitionandTriger : MonoBehaviour
             fireLight.enabled = false;
 
         }
+    }
+    private IEnumerator WaitAndShow()
+    {
+        yield return new WaitForSeconds(2);
+        enterPanel.SetActive(false);
     }
 }
