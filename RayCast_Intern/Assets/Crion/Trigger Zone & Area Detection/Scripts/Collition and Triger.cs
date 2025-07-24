@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollitionandTriger : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class CollitionandTriger : MonoBehaviour
     public TextMeshProUGUI labText;
     public TextMeshProUGUI topText;
     public GameObject enterPanel;
+    public Loading_Scene scene;
     private void Start()
     {
         enterPanel.SetActive(false);
@@ -68,6 +70,11 @@ public class CollitionandTriger : MonoBehaviour
             }
 
         }
+        if (other.CompareTag("SceneChange"))
+        {
+            scene.SceneManage();
+            DontDestroyOnLoad(gameObject);
+        }
 
     }
     private void OnTriggerStay(Collider other)
@@ -96,6 +103,7 @@ public class CollitionandTriger : MonoBehaviour
         entryText.enabled = false ;
         
     }
+    
     //public IEnumerator ShowtopPanel()
     //{
     //    yield return new WaitForSeconds(2f);

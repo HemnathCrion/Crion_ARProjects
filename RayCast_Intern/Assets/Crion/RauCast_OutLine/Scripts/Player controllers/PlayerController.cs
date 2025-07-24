@@ -3,16 +3,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController cc;
-    [SerializeField] private GameObject player;
+    public GameObject player;
     [SerializeField] private Camera cam;
     [SerializeField] private float Sensitivity;
-    [SerializeField] private float speed;
+    public float speed = 5f;
     public bool isMoving;
     public float xRotation = 0f;
     public float yRotation = 0f;
     private void Start()
     {
         cc.enabled = true;
+        
     }
     private void Update()
     {

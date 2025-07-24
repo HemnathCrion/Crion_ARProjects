@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Crion/Scene Transitions with Button or Trigger/Scene/Scene UI 2.unity
+    guid: 949f864c90035a64da8e3dcda9d4b306
+  - enabled: 1
+    path: Assets/Crion/Scene Transitions with Button or Trigger/Scene/New Scene.unity
+    guid: fe2d9e0cedc570c41834a0585bc84ef2
   m_configObjects: {}

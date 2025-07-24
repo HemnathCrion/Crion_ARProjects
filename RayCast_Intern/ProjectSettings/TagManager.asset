@@ -9,6 +9,7 @@ TagManager:
   - TopLight
   - Fire
   - LabTag
+  - SceneChange
   layers:
   - Default
   - TransparentFX
